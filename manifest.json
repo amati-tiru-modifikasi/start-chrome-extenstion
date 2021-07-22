@@ -1,0 +1,10 @@
+{
+    "name": "My Second Extenstion Tutorial Followed",
+    "description": "Another tutorial about create chrome extenstion",
+    "version": "0.0.1",
+    "permissions": ["contextMenus","activeTab"],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "manifest_version": 2
+}
