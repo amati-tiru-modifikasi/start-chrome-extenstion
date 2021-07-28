@@ -6,6 +6,10 @@ function MyGenericClick(info, tab){
 
 function MyImageClick(info, tab) {
     console.log("Clicked an image:", info, tab);
+    chrome.windows.create({
+        "url":"https://facebook.com/sharer.php?u=" + info.srcUrl + "&display=popup" ,
+        "type": "popup"
+    })
 }
 
 chrome.contextMenus.create({
@@ -15,15 +19,12 @@ chrome.contextMenus.create({
 })
 
 chrome.contextMenus.create({
-    "title": "Share",
+    "title": "Share Image",
     "contexts" : ["image"],
     "onclick": MyImageClick,
 })
 
-function sendResponse(){
-    
-}
-
 chrome.runtime.onMessage.addListener(function(msg,sender,sendResponse){
     console.log("Message", msg)
+    sendResponse({"text": "Menerima LINKS"});
 })
