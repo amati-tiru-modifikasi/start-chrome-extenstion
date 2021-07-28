@@ -16,6 +16,14 @@ chrome.contextMenus.create({
 
 chrome.contextMenus.create({
     "title": "Share",
-    "contexts" : ["page"],
+    "contexts" : ["image"],
     "onclick": MyImageClick,
+})
+
+function sendResponse(){
+    
+}
+
+chrome.runtime.onMessage.addListener(function(msg,sender,sendResponse){
+    console.log("Message", msg)
 })
