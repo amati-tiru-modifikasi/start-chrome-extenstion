@@ -1,6 +1,12 @@
 {
     "name": "My Second Extenstion Tutorial Followed",
     "description": "Another tutorial about create chrome extenstion",
+    "icons": {
+        "16":"16.png",
+        "48":"48.png",
+        "64":"64.png",
+        "128":"128.png"
+    },
     "version": "0.0.1",
     "permissions": ["contextMenus","activeTab"],
     "background": {
