@@ -1,21 +1,21 @@
 {
-    "name": "My Second Extenstion Tutorial Followed",
-    "description": "Another tutorial about create chrome extenstion",
+    "name": "Bulk Image Downloader",
+    "description": "Download Every image in Browser Chrome",
+    "version": "0.0.1",
+    "permissions": ["contextMenus","activeTab"],
     "icons": {
         "16":"16.png",
         "48":"48.png",
         "64":"64.png",
         "128":"128.png"
     },
-    "version": "0.0.1",
-    "permissions": ["contextMenus","activeTab"],
     "background": {
         "scripts": ["background.js"]
     },
     "content_scripts": [
         {
-            "matches": ["*://www.google.com/*","*://www.youtube.com/*"],
-            "js": ["index.js"]
+            "matches": ["*://www.google.com/*"],
+            "js": ["content.js"]
         }
     ],
     "manifest_version": 2
