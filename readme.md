@@ -4,4 +4,4 @@ Tutorial ini didapatkan dari [Joseph Delgadillo](https://www.udemy.com/share/102
 
 ## Sourcecode Link
 
-https://github.com/ngcourses/Chrome-Extension.git
+https://github.com/ngcourses/ImageDownloader
