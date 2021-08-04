@@ -2,7 +2,7 @@
     "name": "Bulk Image Downloader",
     "description": "Download Every image in Browser Chrome",
     "version": "0.0.1",
-    "permissions": ["contextMenus","activeTab"],
+    "permissions": ["<all_urls>","tabs","activeTab"],
     "icons": {
         "16":"16.png",
         "48":"48.png",
@@ -13,12 +13,12 @@
         "default_popup": "popup/index.html"
     },
     "background": {
-        "scripts": ["background.js"]
+        "scripts": ["jquery.min.js","background.js"]
     },
     "content_scripts": [
         {
-            "matches": ["*://www.google.com/*"],
-            "js": ["content.js"]
+            "matches": ["<all_urls>"],
+            "js": ["jquery.min.js","content.js"]
         }
     ],
     "manifest_version": 2
